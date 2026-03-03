@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>An Animation</title>
+</head>
+<body>
+	<canvas id="myCanvas"
+		width=500
+		height=250></canvas>
+	<style>
+	canvas{
+	border: black 1px solid;
+	background-color: #fff0f3;
+	}
+	</style>
+<script>
+	const canvas = document
+	.getElementById("myCanvas");
+	const ctx = canvas.getContext("2d");
+	
+	let speed = 3;
+	
+	let heart = 100;
+	let star = 0;
+	let triangle = -50;
+
+	function animate() {
+    ctx.clearRect(0, 0, 500, 250);
+	heart = heart + speed;
+	star = star + speed;
+	triangle = triangle + speed;
+	
+	//Draw a star
+	ctx.fillStyle = "khaki";
+	ctx.strokeStyle = "goldenrod";
+	ctx.beginPath();
+	ctx.moveTo(star, 20);
+	ctx.lineTo(star + 10, 35);
+	ctx.lineTo(star + 30, 35);
+	ctx.lineTo(star + 15, 50);
+	ctx.lineTo(star + 20, 70);
+	ctx.lineTo(star, 60);
+	ctx.lineTo(star - 20, 70);
+	ctx.lineTo(star - 15, 50);
+	ctx.lineTo(star - 30, 35);
+	ctx.lineTo(star - 10, 35);
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
+	//Draw a triangle
+	ctx.fillStyle = "#ffc2d4";
+	ctx.strokeStyle = "#da627d";
+	ctx.beginPath();
+	ctx.moveTo(triangle, 190); 
+	ctx.lineTo(triangle - 30, 230);   
+	ctx.lineTo(triangle + 30, 230);    
+	ctx.closePath();
+	ctx.fill();
+	ctx.stroke();
+
+	//Draw a heart
+	ctx.fillStyle = "#aa1155";
+	ctx.strokeStyle = "#4f000b";
+	ctx.beginPath();
+	ctx.moveTo(heart, 155);       
+	ctx.lineTo(heart - 25, 125);  
+	ctx.lineTo(heart + 25, 125);    
+	ctx.fill();
+	ctx.beginPath();
+	ctx.arc(heart - 12, 125, 13, -Math.PI,0);
+	ctx.arc(heart + 12, 125, 13, -Math.PI,0);
+	ctx.fill();
+	ctx.stroke();
+
+	if (triangle > 550){
+	heart = 150;
+	star = 50;
+	triangle = 0;
+	}
+	
+	requestAnimationFrame(animate);
+	}
+	animate();
+</script>
+</body>
+</html>
