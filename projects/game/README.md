@@ -19,11 +19,11 @@ The player starts at the Lab Station, which is the common area, if it can be cal
 
 ## Story
 
-Each week in the Culinary Arts class there is a lab activity, and this week's is a decorated yellow cake! This lab will take on for 4 days:
-* **Day 1:** On the first day, you will prepare your batter and bake your cake.
-* **Day 2:** Since the cake has to be decorated, today will be buttercream day. You will make the buttercream to be ready to start decorating the next day.
-* **Day 3:** Chef made (or bought) some fillings for the class. You get to choose the flavor of your filling and get the cake filled and crumb coated with the buttercream.
-* **Day 4:** The final day is for any piping you want to do and extra decorations. Today you will get graded and get to try the cake you have made!
+Each week in the Culinary Arts class there is a lab activity, and this week's is a decorated yellow cake! This lab will have 4 stages:
+* **Stage 1:** Player will prepare the batter and bake the cake.
+* **Stage 2:** Will make the buttercream to be ready to start decorating the cake on the next stage.
+* **Stage 3:** Chef made (or bought) some fillings for the class. Player gets to choose the flavor of the cake filling and filling it as well as crumb coating.
+* **Stage 4:** Final stage for piping and decorartions. Will get graded and get to try the cake you have made!
 
 ## Global Variables
 
