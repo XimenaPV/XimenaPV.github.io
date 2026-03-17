@@ -8,18 +8,14 @@ This game takes place at the Culinary Arts classroom at ACC.
 
 ```mermaid
 graph TD;
-    bus(((Bus)))<-->Commons;
-    Library<-->Commons;
-    Box<-->Cafeteria;
-    Cafeteria<-->Commons;
-    Commons<-->Outside;
-    Outside<-->Portable;
-    Portable<-->rm511;
-    Portable<-->Bathroom;
+    Lab Station (Culinary Classroom)<-->Locker Room;
+    Lab Station<-->Bathroom;
+    Lab Station<-->Dish Room;
+    Lab Station<-->Baking Area;
+    Lab Station<-->Walkin-In Fridge;
 ```
 
-The player starts on the bus, and then is directed into the Commons. T
-They can explore, but must eventually make their way to rm511.
+The player starts at the Lab Station, which is the common area, if it can be called that, in the Culinary Arts classroom (basically where all the students work and do their assignments). From then, the student has to go to certain areas when indicated but also has time to walk around freely as long as they stay on task!
 
 ## Story
 
@@ -31,20 +27,4 @@ Each week in the Culinary Arts class there is a lab activity, and this week's is
 
 ## Global Variables
 
-The most important variables are
-`haveCup` and `cupIsFull`, both
-booleans that track progress in the
-story. Depending on these two variables,
-some rooms will display different things. For example, if you walk into the
-library without the cup, it will prompt you to
-read. If you walk in with the cup, it will show
-the librarian filling the cup with coffee.
-
-I also have numeric variables called `day` and `minute` which keep track of 
-time. `minute` starts at 0 and counts up
-with each move.
-
-I have a little HUD map, and use a bunch of 
-boolean variables to control which
-rooms the player has discovered. A map is only displayed after the user
-visits it.
+The most important variables are 'currentDay' and 'playerScore'. 'currentDay' updates the day in which the player is, like Day 1 or Day3. 'playerScore' keeps track of the player's score.
