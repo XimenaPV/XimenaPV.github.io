@@ -1,0 +1,180 @@
+/* Main CSS styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* layout and typography */
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #fff3f0;
+  color: #231b1b;
+  line-height: 1.3;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    font-family: "DM Sans", sans-serif;
+    text-decoration: underline wavy;
+color: #932f6d;
+  }
+ .header-grid {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    color: #231b1b; 
+    text-align: center;
+    background-color: #faa4bd ;
+    border: 1px solid black;
+    text-decoration: none;
+ }
+ .header-grid div {
+    padding: 10px;
+    text-decoration: none;
+ }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 10vw;;
+}
+
+.center {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+}
+
+div{
+    float:left;
+    margin-right:5px;
+}
+
+div > img{
+   height:200px;
+    width:200px;
+}
+
+p{
+    text-align:center;
+}
+
+img{
+ border: 1px solid #231b1b;
+ margin-bottom: 15px;
+ }
+
+strong {
+ color:#f564a9;
+  font-weight: 600;
+}
+
+footer {
+ font-size: 0.9rem;
+ color: #f564a9;
+ text-align: center;
+ font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.featured {
+    margin: 30px 0 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.featured p {
+    font-size: 1rem;
+}
+
+/* projects */
+
+.project {
+    margin-top: 20px;
+    display: flex;
+font-family: "DM Sans", sans-serif;
+ flex-direction: column;
+ text-align: center;
+    margin-bottom: 10vh;
+}
+
+ h1 {
+     font-size: 2.2rem;
+    font-weight: 600;
+    color: #bd4089;
+    text-align: center;
+   } 
+  h2 {
+   font-size:1.5rem;
+    color: #bd4089;
+   }
+
+
+ p {
+   font-size: 1rem;
+    text-align: center;
+   margin-bottom: 10px;
+  padding: 10px;
+   font-weight: 400;
+ 
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #bd4089;
+}
+
+
+/* Mobile styling */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px;
+    }
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+i    .project-tag {
+        font-size: 0.85rem;
+    }
+
+    .project-images {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project-image.device,
+    .project-image.widget {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 16px;
+    }
+}

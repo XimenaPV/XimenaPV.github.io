@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Heart</title>
+<style>
+	canvas{
+		border: red 2px solid;
+		background-color: #fff0f3;
+	}
+</style>
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400">
+	</canvas>
+	<script>
+	const canvas = document.getElementById("canvas");
+	const ctx = canvas.getContext ("2d");
+
+	ctx.fillStyle = "#ff85a1";
+	ctx.strokeStyle = "pink";
+	ctx.lineWidth = 2;
+	ctx.beginPath ();
+	ctx.arc (145,120,45,-Math.PI,0);
+	ctx.fill();
+	ctx.stroke();
+
+	ctx.fillStyle = "#ff85a1";
+	ctx.strokeStyle = "pink";
+	ctx.lineWidth = 2;
+	ctx.beginPath ();
+	ctx.arc (235,120,45, -Math.PI,0);
+	ctx.fill();
+	ctx.stroke();
+	
+	ctx.fillStyle = "#ff85a1";
+	ctx.strokeStyle = "pink";
+	ctx.beginPath ();
+	ctx.moveTo(100,120);
+	ctx.lineTo(190,320);
+	ctx.lineTo(280,120);
+	ctx.fill();
+	ctx.stroke();
+	</script>
+</body>
+</html>

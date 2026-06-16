@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Gamedev Canvas Workshop</title>
+	<style>
+		*{
+		padding: 0;
+		margin: 0;
+		}
+		canvas{
+		background: #efcfe3;
+		display: block;
+		margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="480" height="320"></canvas>
+<script>
+	const canvas = document.getElementById("myCanvas");
+	const ctx = canvas.getContext("2d");
+	const paddleHeight = 10;
+	const paddleWidht = 75;
+	let paddleX = (canvas.width - paddleWidth) / 2;
+	let rightPressed = false;
+	let leftPressed = false;
+	function drawPaddle(){
+		ctx.beginPath();
+		ctx.rect(paddleX, canvas.height - paddleHeight - 10, paddleWidth, paddleHeight);
+	ctx.fillStyle = "#009500";
+	ctx.fill();
+	ctx.closePath();
+	}
+	
+	function draw() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	//clear canvas
+	drawPaddle();
+	if(rightPressed && paddleX < canvas.width - paddlewidth){
+	paddleX += 5;
+	else if(leftPressed && paddleX > 0){
+	paddleX -= 5; }
+	requestAnimationFrame(draw);
+	}
+	//Keyboard controls
+	document.addEventListener("keydown", function(e){
+	if(e.key === "Right" || e.key === "ArrowRight"){
+	rightPressed = "true";}
+	else if(e.key === "Left" || e.key === "ArrowLeft"){
+	leftPressed == "true" }});
+	document.addEventListener("keyup", function(e){
+	
+</script>
+</body>
+</html>

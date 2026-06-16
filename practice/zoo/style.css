@@ -1,0 +1,21 @@
+table, tr, th, td{
+	border: 3px dashed red;
+	border-collapse: collapse;
+}
+body
+	{ background-color: LemonChiffon;
+}
+h1{
+	background-color: PapayaWhip;
+}
+#firstLink{
+	background-color: BlanchedAlmond;}
+#info{
+	background-color: pink;
+}
+.checker{
+	background-color: Chartreuse;
+}
+#zoo{
+	text-decoration: underline;
+}
